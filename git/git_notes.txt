@@ -1,0 +1,38 @@
+# configure local and global repository settings
+git config --global user.email "email@address.com"
+git config --global user.name "Name"
+git config user.email "email@address.com"
+git config user.name "Name"
+
+# make a directory a git repository
+git init
+
+# make a local copy of the remote respository
+git clone <https/ssh url> 
+
+# check the status of the local vs remote git project
+git status
+
+# add files ready to commit to remote repo
+git add <filenames>
+
+# commit the changes to the branch, -m is a shortcut to add a message inline
+git commit -m "commit msg"
+
+# push the changes to the remote respository, specify branch (default master)
+git push origin <branch-name/master> 
+
+# if remote repo has changed, pull any changes before pushing
+git pull <branch-name>
+
+# switch to and create a new branch with specified name
+git checkout -b <branch-name>
+
+# create a new branch only
+git branch <branch-name>
+
+# delete a branch
+git branch -d <branch-name>
+
+# list all branch names
+git branch -a
