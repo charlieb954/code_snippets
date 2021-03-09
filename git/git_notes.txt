@@ -36,3 +36,6 @@ git branch -d <branch-name>
 
 # list all branch names
 git branch -a
+
+# add untracked filed
+git status -s | awk '{print $2}' >> .gitignore

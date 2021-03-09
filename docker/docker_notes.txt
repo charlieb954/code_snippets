@@ -1,0 +1,20 @@
+# start daemon
+	systemctl start docker
+
+# build image
+	docker build <image> .
+
+# run container in detached mode on port 80 
+	docker run -d -p 80:80 <image>
+
+# stop container
+	docker stop <container>
+
+# show running/exited containers
+	docker ps -a
+
+# show docker logs
+	docker logs <container>
+
+# clean envinroment by removing unused containers
+	docker system prune
