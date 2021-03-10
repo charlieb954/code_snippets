@@ -1,8 +1,8 @@
 # start daemon
 	systemctl start docker
 
-# build image
-	docker build <image> .
+# build tagged image
+	docker build -t <name> .
 
 # run container in detached mode on port 80 
 	docker run -d -p 80:80 <image>
@@ -13,8 +13,20 @@
 # show running/exited containers
 	docker ps -a
 
+# stop all running containers
+    docker stop $(sudo docker ps -a -q)
+
+# remove all exited containers
+    docker rm -f $(sudo docker ps -a -q)
+
 # show docker logs
 	docker logs <container>
 
 # clean envinroment by removing unused containers
 	docker system prune
+
+# start a docker-compose service
+	docker-compose up
+
+# bring down docker-compose service
+	docker-compose down
